@@ -67,8 +67,19 @@ try {
 }
 }
 
+const getAll= async (req,res)=>{
+    try {
+        const getUsers= await facebookModel.find()
+        res.json(getUsers)
+    } catch (error) {
+        res.send(error.message)
+    }
+    
+}
+  
+
 module.exports={
-    signUp,login
+    signUp,login,getAll
 }
 
 
