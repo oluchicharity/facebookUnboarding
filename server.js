@@ -4,7 +4,7 @@ const app= express()
 
 app.use(express.json())
 
-app.get("/api/v1",(req,res)=>{
+app.get("/",(req,res)=>{
 res.send(`welcome to facebook`)
 })
 const facebookRouter= require("./router/router")
