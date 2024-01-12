@@ -2,7 +2,7 @@ const express= require("express")
 
 const{ signUp, login }=require("../controllers/controller")
 const authentication= require("../middleware/authentication")
-const validating= require("../validate/validate")
+// const validating= require("../validate/validate")
 
 const router= express.Router()
 

@@ -1,12 +1,13 @@
 require("../models/model")
 const facebookModel = require("../models/model")
-const validation=require("../validate/validate")
+const {validateFacebook}=require("../validate/validate")
+const {validateLogin}=require("../validate/validate")
 const jwt= require("jsonwebtoken")
 require("dotenv").config()
 
 const signUp = async (req,res)=>{
 try {
-    const {error}= await validation(req.body)
+    const {error}= await validateFacebook(req.body)
             if(error){
                 res.status(500).json({message:error.message})
         }else{
